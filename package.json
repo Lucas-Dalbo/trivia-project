@@ -1,6 +1,7 @@
 {
   "name": "trivia-project",
   "version": "0.1.0",
+  "homepage": "https://lucas-dalbo.github.io/trivia-project",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -20,7 +21,6 @@
     "redux-thunk": "^2.4.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://lucas-dalbo.github.io/trivia-project/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
