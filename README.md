@@ -1,33 +1,43 @@
-# Music App - Trybetunes
 
-## What is this project?
-TrybeWallet is a project that I made as a student of the Trybe Web Development School!
+[Read it in English!](./README-Eng.md)
 
----
+# Projeto Trivia
+Este projeto foi desenvolvido enquanto estudante da Trybe.
 
-## What was used:
-  -  React;
-  -  React Router;
-  -  Redux;
-  -  Redux Thunk.
+## O que a aplicação faz?
+ - Na tela inicial, a pessoa usuaria coloca seu nome e email para começar a jogar;
+ 
+ - Caso tenha seu e-mail registrado no Gravatar, sua foto de perfil é importada de lá;
 
-## In this App you can:
-  -  In the Login page, you must type an email and a password to enter;
-  -  In the Wallet page, you can add expenses;
-  -  You can edit an expense, changing everything you want;
-  -  You can delete an expense.
+ - No momento, a pessoa usuária responde a até 5 perguntas, com um timer de 30 segundos para cada;
 
----
+ - Após as 5 perguntas ela é encaminhada para uma tela de resultados;
 
-## Lint
-The project was developed following the Clean Code standards specified by Trybe's Lint rules.
+ - Na tela de resultados, ela decide se quer jogar novamente ou ver a página de Ranking;
 
-For installation and more information [click here](https://github.com/betrybe/eslint-config-trybe).
+ - A tela de Confiurações ainda esta em desenvolvimento.
 
----
 
-## Preview
-| Login | Wallet |
-| --- | --- |
-| <img src="./images/01-login.png" width="300" height="180"> | <img src="./images/02-wallet.png" width="300" height="180"> | 
+
+
+
+## O que foi utilizado?
+
+
+- React;
+- Redux;
+- React-Router.
+
+
+## Lint Utilizado
+O projeto foi desenvolvido seguindo as Normas de Códgo Limpo especificadas pelas regras de Lint da Trybe.
+
+Instalão e informações adicionais podem ser verificara [aqui](https://github.com/betrybe/eslint-config-trybe).
+
+## Demonstração
+Abaixo você pode conferir uma demosntração de como ficou!
+
+OBS: Ao reiniciar a página em qualquer lugar que não seja a página inicial, ocorrerá um erro. Este erro provem do própio gh-pages.
+
+[Site de demonstração!](https://lucas-dalbo.github.io/trivia-project/)
 
