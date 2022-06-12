@@ -25,10 +25,22 @@ class Game extends React.Component {
     this.fetchTrivia();
   }
 
+  makeURL = () => {
+    const { settings } = this.props;
+    const { cateQuestions, difQuestions, numbQuestions, typeQuestions } = settings;
+    const quant = `amount=${numbQuestions}`;
+    const categ = cateQuestions === 'all' ? '' : `&category=${cateQuestions}`;
+    const diff = difQuestions === 'all' ? '' : `&difficulty=${difQuestions}`;
+    const type = typeQuestions === 'all' ? '' : `&type=${typeQuestions}`;
+    const token = localStorage.getItem('token');
+    const api = 'https://opentdb.com/api.php?';
+
+    return `${api}${quant}${categ}${diff}${type}&token=${token}`;
+  }
+
   fetchTrivia = async () => {
     this.setState({ loading: true }, async () => {
-      const token = localStorage.getItem('token');
-      const URL = `https://opentdb.com/api.php?amount=5&token=${token}`;
+      const URL = this.makeURL();
 
       const response = await fetch(URL);
       const data = await response.json();
@@ -163,6 +175,10 @@ class Game extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  settings: state.settings,
+});
+
 const mapDispatchToProps = (dispatch) => ({
   sendScore: (score) => dispatch(setScore(score)),
 });
@@ -172,6 +188,7 @@ Game.propTypes = {
     push: PropTypes.func,
   }).isRequired,
   sendScore: PropTypes.func.isRequired,
+  settings: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
-export default connect(null, mapDispatchToProps)(Game);
+export default connect(mapStateToProps, mapDispatchToProps)(Game);

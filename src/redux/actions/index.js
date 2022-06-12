@@ -15,3 +15,11 @@ export const setScore = (score) => ({
 export const resetState = () => ({
   type: RESET,
 });
+
+// Settings action
+export const SETTINGS = 'SETTINGS';
+
+export const changeSettings = (changes) => ({
+  type: SETTINGS,
+  changes,
+});
