@@ -1,5 +1,5 @@
 
-[Leia em Portugês!](./README.md)
+[Leia em Português!](./README.md)
 
 # Trivia Project
 This project was developed while a student at Trybe.
@@ -16,9 +16,6 @@ This project was developed while a student at Trybe.
   - On the results screen, the user decides if he wants to play again or see the Ranking page;
 
   - The Settings screen is still under development.
-
-
-
 
 
 ## What was used?
